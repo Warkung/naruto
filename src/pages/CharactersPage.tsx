@@ -36,7 +36,7 @@ function CharactersPage() {
         </Link>
       </div>
       <div>
-        <h1 className="text-[100px] text-white font-bold ">Character List</h1>
+        <h1 className="text-[70px] text-white font-bold ">Character List</h1>
       </div>
       <form className="mb-9 flex flex-col">
         <label className="text-white" htmlFor="">
