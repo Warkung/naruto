@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Characters from "./pages/Characters";
+import Characters from "./pages/CharactersPage";
+import ClanPages from "./pages/ClanPages";
 
 function App() {
   const router = createBrowserRouter([
@@ -11,6 +12,10 @@ function App() {
     {
       path: "characters",
       element: <Characters />,
+    },
+    {
+      path: "clan",
+      element: <ClanPages />,
     },
   ]);
 
