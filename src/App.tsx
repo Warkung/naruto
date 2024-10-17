@@ -1,5 +1,4 @@
-
-import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 
 function App() {
