@@ -8,8 +8,15 @@ function CharactersPage() {
   const [chars, setChars] = useState<Characters[]>([]);
   const callData = async () => {
     const response = await serviceChar();
+<<<<<<< Updated upstream
     setFetchchars(response.data.characters);
     setChars(response.data.characters);
+=======
+    console.log(response);
+    
+    setFetchchar(response.data.characters);
+    setChar(response.data.characters);
+>>>>>>> Stashed changes
   };
 
   useEffect(() => {
@@ -36,7 +43,11 @@ function CharactersPage() {
         </Link>
       </div>
       <div>
+<<<<<<< Updated upstream
         <h1 className="text-[70px] text-white font-bold ">Character List</h1>
+=======
+        <h1 className="text-[80px] text-white font-bold ">Character List</h1>
+>>>>>>> Stashed changes
       </div>
       <form className="mb-9 flex flex-col">
         <label className="text-white" htmlFor="">

@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function ClanPages() {
   const [clans, setClans] = useState<Clans[]>([]);
