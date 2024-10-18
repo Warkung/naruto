@@ -21,3 +21,7 @@ export const serviceChar = async (limit?: number): Promise<CharactersType> => {
   );
   return respose;
 };
+export const serviceCharById = async (id: number) => {
+  const respose = await axios.get(`${NARUTO_BASE_URL}/characters/${id}`);
+  return respose;
+};
