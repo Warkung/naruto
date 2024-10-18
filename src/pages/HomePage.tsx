@@ -16,7 +16,7 @@ function HomePage() {
           <img className="h-56 w-96" src="/public/images/characters.jpg" alt="" />
         </Link>
         <Link to={`clan`} className="m-auto">
-          <h1 className="text-white text-[45px] font-bold mb-4">Clan</h1>
+          <h1 className="text-white text-[45px] font-bold mb-4">Clans</h1>
           <img className="h-56 w-96" src="/public/images/clans.jpeg" alt="" />
         </Link>
       </div>

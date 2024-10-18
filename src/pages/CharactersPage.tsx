@@ -4,12 +4,12 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 function CharactersPage() {
-  const [fetchar, setFetchchar] = useState<Characters[]>([]);
-  const [char, setChar] = useState<Characters[]>([]);
+  const [fetchars, setFetchchars] = useState<Characters[]>([]);
+  const [chars, setChars] = useState<Characters[]>([]);
   const callData = async () => {
     const response = await serviceChar();
-    setFetchchar(response.data.characters);
-    setChar(response.data.characters);
+    setFetchchars(response.data.characters);
+    setChars(response.data.characters);
   };
 
   useEffect(() => {
@@ -20,10 +20,10 @@ function CharactersPage() {
   const keyword = watch("keyword");
 
   useEffect(() => {
-    const response = fetchar.filter((item) =>
+    const response = fetchars.filter((item) =>
       item.name.toLowerCase().includes(keyword?.toLowerCase())
     );
-    setChar(response);
+    setChars(response);
   }, [keyword]);
 
   return (
@@ -45,11 +45,11 @@ function CharactersPage() {
         <input {...register("keyword")} className="w-52" type="text" />
       </form>
       <div className=" grid grid-cols-4 gap-5">
-        {char.map((item) => {
+        {chars.map((char) => {
           return (
-            <div className="text-white" key={item.id}>
-              {item.name}
-              <img src={item.images[1] || item.images[0]} alt="character" />
+            <div className="text-white" key={char.id}>
+              {char.name}
+              <img src={char.images[1] || char.images[0]} alt="character" />
             </div>
           );
         })}
