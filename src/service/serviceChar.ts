@@ -21,7 +21,49 @@ export const serviceChar = async (limit?: number): Promise<CharactersType> => {
   );
   return respose;
 };
-export const serviceCharById = async (id: number) => {
+
+interface CharIdType{
+  data:CharIdData
+  status:number
+}
+
+export interface CharIdData {
+  id: number
+  name: string
+  images: string[]
+  debut: Debut
+  family: Family
+  jutsu: string[]
+  natureType: string[]
+  personal: Personal
+  uniqueTraits: string[]
+}
+
+export interface Debut {
+  manga: string
+  anime: string
+  novel: string
+  movie: string
+  game: string
+  ova: string
+  appearsIn: string
+}
+
+export interface Family {
+  "incarnation with the god tree": string
+  "depowered form": string
+}
+
+export interface Personal {
+  status: string
+  kekkeiGenkai: string
+  classification: string
+  jinchūriki: string[]
+  titles: string[]
+}
+
+
+export const serviceCharById = async (id: number):Promise<CharIdType> => {
   const respose = await axios.get(`${NARUTO_BASE_URL}/characters/${id}`);
   return respose;
 };
