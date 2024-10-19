@@ -29,11 +29,11 @@ function CharactersPage() {
   return (
     <div className="w-[90%] m-auto">
       <div>
-        <h1 className="text-[60px] text-white font-bold naruto pt-7 text-yellow-600">
+        <h1 className="text-[60px] text-white font-bold naruto pt-7">
           Naruto Character List
         </h1>
       </div>
-      <form className="mb-9 flex flex-col grid grid-cols-3 gap-x-5">
+      <form className="mb-9 flex-col grid grid-cols-3 gap-x-5">
         {/* Search Name */}
         <div>
           <label
